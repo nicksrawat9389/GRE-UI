@@ -1,0 +1,29 @@
+<section class="account-settings">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="account-setting-left">
+                    <h2>{{user?.StoreName}}<br>Account Settings</h2>
+                    <ul>
+                        <li><a [routerLink]="['/dashboard/account/manage-profile']" routerLinkActive="active">
+                            <span>Manage Profile</span></a></li>
+                        <li><a [routerLink]="['/dashboard/account/change-password']" routerLinkActive="active"><span>Change
+                                Password</span></a></li>
+                        <li><a [routerLink]="['/dashboard/order-history']" routerLinkActive="active"><span>Tobacco Order History</span></a>
+                        </li>
+                        <li><a [routerLink]="['/dashboard/promo-order-history']" routerLinkActive="active"><span>Promo Order History</span></a>
+                        </li>
+                        <li><a href="javascript:void(0)" (click)="onLogoutClick()"><span>Logout</span></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>
